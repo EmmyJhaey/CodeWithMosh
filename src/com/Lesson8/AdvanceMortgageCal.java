@@ -22,18 +22,36 @@ public class AdvanceMortgageCal {
         Scanner stdin = new Scanner(System.in);
 //     Principal Input
         System.out.println("Welcome to Our Mortgage Calculator");
-        System.out.print("Enter Principal: ");
-        principal = stdin.nextInt();
+        while (true){
+            System.out.print("Enter Principal: ");
+            System.out.println("Enter a numbr between 1,000 - 1,000,000");
+            principal = stdin.nextInt();
+            if (principal >= 1000 && principal <= 1000000)
+                break;
+        }
+        //divider
         System.out.println("=======================");
 
 //        monthlyInterest Input
-        System.out.print("Enter Annual Interest Rate: ");
-        monthInterest = stdin.nextDouble();
+        while(true){
+            System.out.print("Enter Annual Interest Rate: ");
+            System.out.println("Enter a number greater than  0 or equal to 30");
+            monthInterest = stdin.nextDouble();
+            if (monthInterest > 0 && monthInterest <=30)
+                break;
+        }
+        //divider
         System.out.println("=======================");
 
 //        period Inputs
-        System.out.print("Enter Period(Years): ");
-        period = stdin.nextInt();
+        while(true){
+            System.out.print("Enter Period(Years): ");
+            System.out.println("Enter Value between 1 to 30");
+            period = stdin.nextInt();
+            if(period >= 1 && period <= 30)
+                break;
+        }
+        //break
         System.out.println("=======================");
 
 //        Calculation space :
