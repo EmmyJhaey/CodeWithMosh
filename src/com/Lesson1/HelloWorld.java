@@ -1,6 +1,6 @@
-package Lesson1;
+package com.Lesson1;
 
-public class HelloWorld {
+public class   HelloWorld {
 
     public static void main(String[] args) {
 

@@ -1,0 +1,9 @@
+Java Data types
+
+we have 2 data types in java
+
+* Primitive and  Reference Types
+
+primitive for storing simple values and the latter for storing complex values
+
+Primitive : bytes-127, short, int, long, float, double, char, String, boolean
