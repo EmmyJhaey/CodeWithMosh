@@ -5,23 +5,15 @@ import java.util.Scanner;
 
 public class CleanCodeCal {
     public static void main(String[] args) {
-        /**
-         * @Final Variable for Months_In_A_Year
-         * Principal
-         * Period(Divided Multiply by the 12 => as the Months in a year) = N
-         * Annual Interest ( Divided by the 12 => as the Months in a year) = R
-         */
 
         System.out.println("Welcome to Our Mortgage Calculator");
 
-        //     Principal Input
-        int principal = (int) readValue("Enter Principal", 1000, 1_000_000);
+//        Principal Input
+        int principal = (int) readValue("Enter Principal: ", 1000, 1_000_000);
         System.out.println("=======================");
-
 //        monthlyInterest Input
-        double monthlyInterest = readValue("Enter MonthlyInterest: ", 0 , 30);
+        float monthlyInterest = (float) readValue("Enter MonthlyInterest: ", 0 , 30);
         System.out.println("=======================");
-
 //        period Inputs
         byte period = (byte)readValue("Enter Period(Years): ", 1, 30);
         System.out.println("=======================");
@@ -29,10 +21,8 @@ public class CleanCodeCal {
 
 //        Mortgage Calculation
        double mortgage = calMortgage(principal, monthlyInterest, period);
-
 //        Formatting Result
         String finalResult = formatResult(mortgage);
-
         //Printing Result
         System.out.println("Mortgage: " + finalResult);
     }
@@ -41,8 +31,8 @@ public class CleanCodeCal {
         Scanner input = new Scanner(System.in);
         double value;
         while (true) {
+            System.out.println("Enter a number between " + min + " and " + max);
             System.out.print(prompt);
-            System.out.println("Enter a numbr between " + min + " and " + max);
              value = input.nextDouble();
             if (value >= min && value <= max)
                 break;
